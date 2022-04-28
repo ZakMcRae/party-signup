@@ -1,6 +1,6 @@
-import { person } from "../App";
+import { person, UsePeopleValue } from "../App";
 
-const PeopleList = ({ people }: { people: person[] }) => {
+const PeopleList = ({ people }: { people: UsePeopleValue }) => {
   return (
     <div>
       <h1>People List</h1>

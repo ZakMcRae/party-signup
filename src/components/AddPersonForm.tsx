@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { person } from "../App";
+import { person, UsePeopleSetValue, UsePeopleValue } from "../App";
 
 const AddPersonForm = ({
   people,
   setPeople,
 }: {
-  people: person[];
-  setPeople: React.Dispatch<React.SetStateAction<person[]>>;
+  people: UsePeopleValue;
+  setPeople: UsePeopleSetValue;
 }) => {
   const [personToAdd, setPersonToAdd] = useState<person>({
     name: "",

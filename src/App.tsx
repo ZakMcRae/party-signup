@@ -9,8 +9,14 @@ export interface person {
   note?: string;
 }
 
+const usePeople = (initialPeople: person[]) =>
+  useState<person[]>(initialPeople);
+
+export type UsePeopleValue = ReturnType<typeof usePeople>[0];
+export type UsePeopleSetValue = ReturnType<typeof usePeople>[1];
+
 function App() {
-  const [people, setPeople] = useState<person[]>([
+  const [people, setPeople] = usePeople([
     {
       name: "John",
       age: 25,
